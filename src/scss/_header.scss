@@ -1,0 +1,148 @@
+.header{
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 555px;
+
+
+&_dropdown{
+    background-color: black;
+    width: 44px;
+    height: 37px;
+    position:relative;
+    left: 250px;
+    margin-bottom: 23px;
+    display: none;
+    
+}
+}
+
+.nav_list{
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.0001);;
+    max-width: 1200px;
+    height: 75px;
+    list-style-type: none;    
+    padding: 0px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+&_item a{
+    color: $title-color;
+    @include font-open-sans(11px, normal, 30px);    
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    padding-left: 14px;
+    display: inline-block;
+    
+}
+
+&_item a{
+    text-decoration: none;
+    list-style: none;
+}
+
+&_item a:hover{
+    color: #57A4A4;
+    cursor: pointer;
+}
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    
+}
+
+@media (max-width: 325px) {  
+        .nav_menu{
+            display: none;
+        }
+
+        .nav_menu.active {
+            display: block;
+        }
+
+     .nav_list{
+        background-color: #F5F5F5;
+        width: 182px;
+        height: 208px;
+        list-style-type: none;    
+        padding: 0px;
+        position: absolute;
+        left: 146px;
+        top: 43px;
+        display: flex;
+        flex-direction: column;
+        align-items: inherit;
+        // display: none;
+     }
+     
+     
+     .nav_list_item a{
+        color: $title-color;
+        @include font-open-sans(11px, normal, 30px);
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        // padding-left: 14px;            
+     }
+
+
+
+     .nav_list_item:hover{
+         color: #57A4A4;
+         background: #E5E5E5;        
+     }
+
+     .banner{
+         width: 320px;
+         height: 150px;
+     }
+
+    .header_dropdown {
+        position: relative;
+        width: 40px;
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+    
+
+    & span, &:after, &:before{
+        height: 3px;
+        width: 50%;
+        position: absolute;
+        background: #fff;
+        margin: 0px 10px;
+    }
+    & span{
+        top: 18px;
+    }
+    &:after, &:before{
+        content: '';
+    }
+    &:after{
+        bottom: 5px;
+    }
+    &:before{
+        top: 9px;
+    }
+
+    &.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    &.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    &.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+}
+}
+
